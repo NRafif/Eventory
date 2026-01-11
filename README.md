@@ -1,59 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Eventory
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Eventory adalah platform Sistem Manajemen Acara berbasis web yang dirancang untuk memfasilitasi pengelolaan acara secara terpusat. Aplikasi ini menghubungkan tiga pemangku kepentingan utama: Administrator, Penyelenggara (Organizer), dan Peserta, guna menciptakan ekosistem manajemen acara yang efisien, transparan, dan modern.
 
-## About Laravel
+## Latar Belakang dan Tujuan
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Dalam penyelenggaraan acara, pengelolaan informasi, pendaftaran peserta, dan koordinasi antar pihak seringkali menjadi tantangan. Eventory hadir untuk menjawab kebutuhan tersebut dengan menyediakan solusi digital yang memungkinkan:
+- **Administrator** untuk memiliki kendali penuh atas sistem dan pengawasan operasional.
+- **Penyelenggara** untuk mengelola acara, memantau kuota, dan menganalisis partisipasi peserta secara mandiri.
+- **Peserta** untuk mencari, mendaftar, dan mengelola riwayat keikutsertaan mereka dalam berbagai acara dengan mudah.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Aplikasi ini menyediakan fitur-fitur yang dikelompokkan berdasarkan peran pengguna:
 
-## Learning Laravel
+### Administrator
+- **Dashboard**: Menyajikan statistik ringkas mengenai sistem.
+- **Manajemen Acara**: Melakukan pengawasan penuh (membuat, menyunting, menghapus) terhadap seluruh acara yang terdaftar.
+- **Manajemen Penyelenggara**: Mengelola akun penyelenggara (Create, Read, Update, Delete).
+- **Laporan dan Audit**: Memantau status seluruh acara (Draft, Published, Completed, Cancelled).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Penyelenggara (Organizer)
+- **Manajemen Acara Mandiri**: Membuat dan mengelola acara yang diselenggarakan oleh pihak mereka sendiri.
+- **Monitoring Kuota Real-time**: Memantau perkembangan jumlah pendaftar melalui indikator visual.
+- **Kontrol Publikasi**: Mengatur status acara, mulai dari persiapan (Draft) hingga siap dipublikasikan (Published).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Peserta (Participant)
+- **Katalog Acara**: Menjelajahi daftar acara yang tersedia untuk publik.
+- **Sistem Pendaftaran**: Mendaftar pada acara yang diminati selama kuota tersedia.
+- **Riwayat Partisipasi**: Mengakses daftar acara yang telah diikuti sebelumnya.
 
-## Laravel Sponsors
+### Keamanan dan Sistem
+- **Otentikasi Aman**: Sistem login dan registrasi terintegrasi.
+- **Kontrol Akses Berbasis Peran**: Validasi akses (Middleware) untuk memastikan keamanan data antar pengguna.
+- **Validasi Data**: Mekanisme validasi input yang ketat untuk menjaga integritas data (misalnya validasi kuota dan tanggal).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Teknologi yang Digunakan
 
-### Premium Partners
+Proyek ini dikembangkan menggunakan teknologi standar industri modern:
+- **Framework Backend**: Laravel 12 (PHP 8.2+)
+- **Antarmuka Pengguna**: Blade Templates
+- **Styling**: Tailwind CSS
+- **Database**: MySQL (via Eloquent ORM)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Persyaratan Sistem
 
-## Contributing
+Sebelum menjalankan aplikasi, pastikan perangkat Anda telah memenuhi persyaratan berikut:
+- PHP versi 8.2 atau lebih baru
+- Composer
+- Node.js dan NPM
+- Database MySQL
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Panduan Instalasi dan Penggunaan
 
-## Code of Conduct
+Ikuti langkah-langkah berikut untuk menjalankan proyek di lingkungan lokal Anda:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1.  **Duplikasi Repositori**
+    Salin kode sumber proyek ke direktori lokal Anda.
 
-## Security Vulnerabilities
+2.  **Instalasi Dependensi PHP**
+    Jalankan perintah berikut untuk mengunduh pustaka yang dibutuhkan oleh Laravel:
+    ```bash
+    composer install
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3.  **Konfigurasi Lingkungan (`.env`)**
+    Salin file contoh konfigurasi `.env.example` menjadi `.env`:
+    ```bash
+    cp .env.example .env
+    ```
+    Buka file `.env` dan sesuaikan konfigurasi database Anda (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
 
-## License
+4.  **Generate Application Key**
+    Buat kunci enkripsi aplikasi baru:
+    ```bash
+    php artisan key:generate
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5.  **Migrasi Database**
+    Jalankan migrasi untuk membuat tabel-tabel yang diperlukan di database:
+    ```bash
+    php artisan migrate
+    ```
+
+6.  **Instalasi Dependensi Frontend**
+    Unduh dan kompilasi aset frontend (CSS/JS):
+    ```bash
+    npm install
+    npm run build
+    ```
+
+7.  **Menjalankan Server Lokal**
+    Mulai server pengembangan lokal:
+    ```bash
+    php artisan serve
+    ```
+    Aplikasi dapat diakses melalui browser pada alamat yang tertera (biasanya `http://localhost:8000`).
